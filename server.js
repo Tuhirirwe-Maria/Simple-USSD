@@ -23,13 +23,18 @@ app.get('*', (req, res) => {
         // Business logic for first level response and user chose 1
         let response = `CON Choose account information you want to view
         1. Account number
-        2. Account balance`
+        2. Account balance
+        3. Thank maker`
         res.send(response)
       } else if (text == '2') {
         // Business logic for first level response and user chose 2
         let response = `END Your phone number is ${phoneNumber}`
         res.send(response)
-      }  else if (text == '1*1') {
+      }else if (text == '3'){
+             // Business logic for first level response and user chose 3
+        let response = `END She has received your appreciation`
+        res.send(response)
+      } else if (text == '1*1') {
         // Business logic for first level response and user second level chose 1
         let accountNumber = 'ACC1001'
         // This is a terminal request. Note how we start the response with END
