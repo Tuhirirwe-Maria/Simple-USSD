@@ -30,9 +30,10 @@ app.get('*', (req, res) => {
         // Business logic for first level response and user chose 2
         let response = `END Your phone number is ${phoneNumber}`
         res.send(response)
-      }else if (text == '3'){
-             // Business logic for first level response and user chose 3
-        let response = `END She has received your appreciation`
+      } else if (text == '3'){
+       // Business logic for first level response and user chose 3
+       let thanks = "appreciation"
+        let response = `END She has received your ${thanks}`
         res.send(response)
       } else if (text == '1*1') {
         // Business logic for first level response and user second level chose 1
