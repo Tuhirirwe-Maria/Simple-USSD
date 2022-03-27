@@ -30,27 +30,26 @@ app.get('*', (req, res) => {
         // Business logic for first level response and user chose 2
         let response = `END Your phone number is ${phoneNumber}`
         res.send(response)
-      } else if (text == '3'){
-       // Business logic for first level response and user chose 3
-       let thanks = "appreciation"
-        let response = `END She has received your ${thanks}`
-        res.send(response)
-      } else if (text == '1*1') {
+    } else if (text == '1*1') {
         // Business logic for first level response and user second level chose 1
         let accountNumber = 'ACC1001'
         // This is a terminal request. Note how we start the response with END
         let response = `END Your account number is ${accountNumber}`
         res.send(response)
-      } else if (text == '1*2') {
+    } else if (text == '1*2') {
         // This is a second level response where the user chose 1 and chose 2
         let balance = 'UGX 100,000'
         // This is a terminal request. Note how we start the response with END
         let response = `END Your balance is ${balance}`
         res.send(response)
-      }else {
+    } else if (text == '1*3'){
+     // Business logic for first level response 1 and user chose 3
+      let response = `END She has received your appreciation}`
+      res.send(response)
+    }else {
         res.status(400).send('failed to connect!')
-      }
-  })
+    }
+})
 
   app.listen(port, () => {
     console.log(`Server running on port ${port}`)
