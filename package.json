@@ -1,0 +1,11 @@
+{
+  "name": "practiceUSSD",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
+}
