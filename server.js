@@ -44,7 +44,7 @@ app.get('*', (req, res) => {
         res.send(response)
     } else if (text == '1*3'){
      // Business logic for first level response 1 and user chose 3
-      let response = `END She has received your appreciation}`
+      let response = `END She has received your appreciation`
       res.send(response)
     }else {
         res.status(400).send('failed to connect!')
